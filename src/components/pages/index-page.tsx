@@ -1,16 +1,19 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const IndexPage = () => {
+  const navigateTo = useNavigate();
+
   const goToCreateGame = () => {
-    console.log("goToCreateGame");
+    navigateTo("/game/create");
   };
 
   const goToJoinGame = () => {
-    console.log("goToJoinGame");
+    navigateTo("/game/join");
   };
 
   return (
-    <section className="w-full flex divide-x-2">
+    <section className="w-full items-center h-full flex md:flex-row flex-col gap-2 divide-y-2 md:divide-x-2">
       <section className="w-1/2 flex justify-center">
         <section>
           <h1 className="font-bold text-2xl">MasterMind</h1>
