@@ -1,2 +1,2 @@
 export * from "./App";
-export * from "./App.css";
+export * from "./App.css?inline";
