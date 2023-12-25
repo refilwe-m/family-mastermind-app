@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import {
   CreateGamePage,
+  Game,
   GameLayout,
   IndexPage,
   JoinGamePage,
@@ -9,13 +10,13 @@ import {
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <IndexPage />,
+    element: <GameLayout />,
     errorElement: <>Error: 404 Page Not Found</>,
     /*  loader: rootLoader, */
     children: [
       {
-        path: "team",
-        element: <></>,
+        path: "/",
+        element: <IndexPage />,
         /* loader: teamLoader, */
       },
     ],
@@ -33,6 +34,10 @@ export const router = createBrowserRouter([
         path: "join",
         element: <JoinGamePage />,
         /* loader: joinGameLoader, */
+      },
+      {
+        path: "play",
+        element: <Game />,
       },
     ],
   },
